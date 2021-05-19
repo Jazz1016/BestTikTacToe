@@ -28,6 +28,8 @@ class TikTacToeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func replayButtonTapped(_ sender: Any) {
+    }
     // MARK: - Actions
     @IBAction func a1ButtonPressed(_ sender: Any) {
     }
