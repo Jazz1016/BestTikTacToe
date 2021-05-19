@@ -24,8 +24,6 @@ class TikTacToeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
     //MARK: -  Properties
@@ -33,14 +31,30 @@ class TikTacToeViewController: UIViewController {
     
     // MARK: - Actions
       @IBAction func replayButtonTapped(_ sender: Any) {
+        
+        winnerLabel.text = ""
+        a1Button.setTitle("", for: .normal)
+        a2Button.setTitle("", for: .normal)
+        a3Button.setTitle("", for: .normal)
+        b1Button.setTitle("", for: .normal)
+        b2Button.setTitle("", for: .normal)
+        b3Button.setTitle("", for: .normal)
+        c1Button.setTitle("", for: .normal)
+        c2Button.setTitle("", for: .normal)
+        c3Button.setTitle("", for: .normal)
+        
     }
     @IBAction func a1ButtonPressed(_ sender: Any) {
+
+        
         if buttonToggled == true {
             a1Button.setTitle("X", for: .normal)
+            //a1Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         } else {
             a1Button.setTitle("O", for: .normal)
+            //a1Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         }
@@ -48,10 +62,12 @@ class TikTacToeViewController: UIViewController {
     @IBAction func a2ButtonPressed(_ sender: Any) {
         if buttonToggled == true {
             a2Button.setTitle("X", for: .normal)
+            //a2Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         } else {
             a2Button.setTitle("O", for: .normal)
+            //a2Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         }
@@ -59,10 +75,12 @@ class TikTacToeViewController: UIViewController {
     @IBAction func a3ButtonPressed(_ sender: Any) {
         if buttonToggled == true {
             a3Button.setTitle("X", for: .normal)
+            //a3Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         } else {
             a3Button.setTitle("O", for: .normal)
+            //a3Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         }
@@ -70,11 +88,12 @@ class TikTacToeViewController: UIViewController {
     @IBAction func b1ButtonPressed(_ sender: Any) {
         if buttonToggled == true {
             b1Button.setTitle("X", for: .normal)
+            //b1Button.tintColor = .red
             buttonToggled.toggle()
-            checkIfWinner()
             checkIfWinner()
         } else {
             b1Button.setTitle("O", for: .normal)
+            //b1Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         }
@@ -82,21 +101,25 @@ class TikTacToeViewController: UIViewController {
     @IBAction func b2ButtonPressed(_ sender: Any) {
         if buttonToggled == true {
             b2Button.setTitle("X", for: .normal)
+            //b2Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         } else {
             b2Button.setTitle("O", for: .normal)
+            //b2Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         }
     }
-    @IBAction func b3ButtonPressed(_ sender: Any) {
+        @IBAction func b3ButtonPressed(_ sender: Any) {
         if buttonToggled == true {
             b3Button.setTitle("X", for: .normal)
+            //b3Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         } else {
             b3Button.setTitle("O", for: .normal)
+            //b3Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         }
@@ -104,10 +127,12 @@ class TikTacToeViewController: UIViewController {
     @IBAction func c1ButtonPressed(_ sender: Any) {
         if buttonToggled == true {
             c1Button.setTitle("X", for: .normal)
+            //c1Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         } else {
             c1Button.setTitle("O", for: .normal)
+            //c1Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         }
@@ -115,10 +140,12 @@ class TikTacToeViewController: UIViewController {
     @IBAction func c2ButtonPressed(_ sender: Any) {
         if buttonToggled == true {
             c2Button.setTitle("X", for: .normal)
+            //c2Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         } else {
             c2Button.setTitle("O", for: .normal)
+            //c2Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         }
@@ -126,10 +153,12 @@ class TikTacToeViewController: UIViewController {
     @IBAction func c3ButtonPressed(_ sender: Any) {
         if buttonToggled == true {
             c3Button.setTitle("X", for: .normal)
+            //c3Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         } else {
             c3Button.setTitle("O", for: .normal)
+            //c3Button.tintColor = .red
             buttonToggled.toggle()
             checkIfWinner()
         }
@@ -173,5 +202,6 @@ class TikTacToeViewController: UIViewController {
             } else if c1Button.titleLabel?.text == "O" && c2Button.titleLabel?.text == "O" && c3Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
             }
+        }
     }
-}
+    
