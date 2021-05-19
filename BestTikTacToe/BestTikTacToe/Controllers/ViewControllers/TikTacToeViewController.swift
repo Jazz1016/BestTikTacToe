@@ -28,12 +28,6 @@ class TikTacToeViewController: UIViewController {
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//
-//    }
-    
     //MARK: -  Properties
     var buttonToggled: Bool = false
     
@@ -59,7 +53,7 @@ class TikTacToeViewController: UIViewController {
         if buttonToggled == true {
             a3Button.setTitle("X", for: .normal)
         } else {
-            a3Button.titleLabel?.text = "O"
+            a3Button.setTitle("O", for: .normal)
             buttonToggled.toggle()
         }
     }
