@@ -25,39 +25,95 @@ class TikTacToeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//
+//    }
+    
+    //MARK: -  Properties
+    var buttonToggled: Bool = false
     
     // MARK: - Actions
     @IBAction func a1ButtonPressed(_ sender: Any) {
+        
+        
+        if buttonToggled == true {
+        
+            
+            a1Button.titleLabel?.text = "X"
+        } else {
+            
+            
+            a1Button.titleLabel?.text = "O"
+        }
     }
-    
     @IBAction func a2ButtonPressed(_ sender: Any) {
+        
+        if buttonToggled == true {
+            a2Button.titleLabel?.text = "X"
+        } else {
+            a2Button.titleLabel?.text = "O"
+        }
     }
     @IBAction func a3ButtonPressed(_ sender: Any) {
+        
+        if buttonToggled == true {
+            a3Button.titleLabel?.text = "X"
+        } else {
+            a3Button.titleLabel?.text = "O"
+        }
     }
     @IBAction func b1ButtonPressed(_ sender: Any) {
+        
+        if buttonToggled == true {
+            b1Button.titleLabel?.text = "X"
+        } else {
+            b1Button.titleLabel?.text = "O"
+        }
     }
     @IBAction func b2ButtonPressed(_ sender: Any) {
+     
+        if buttonToggled == true {
+            b2Button.titleLabel?.text = "X"
+        } else {
+            b2Button.titleLabel?.text = "O"
+        }
     }
     @IBAction func b3ButtonPressed(_ sender: Any) {
+        
+        if buttonToggled == true {
+            b3Button.titleLabel?.text = "X"
+        } else {
+            b3Button.titleLabel?.text = "O"
+        }
     }
     @IBAction func c1ButtonPressed(_ sender: Any) {
+        
+        if buttonToggled == true {
+            c1Button.titleLabel?.text = "X"
+        } else {
+            c1Button.titleLabel?.text = "O"
+        }
     }
     @IBAction func c2ButtonPressed(_ sender: Any) {
+        
+        if buttonToggled == true {
+            c2Button.titleLabel?.text = "X"
+        } else {
+            c2Button.titleLabel?.text = "O"
+        }
     }
     @IBAction func c3ButtonPressed(_ sender: Any) {
+        
+        if buttonToggled == true {
+            c3Button.titleLabel?.text = "X"
+        } else {
+            c3Button.titleLabel?.text = "O"
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
