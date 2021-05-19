@@ -24,154 +24,202 @@ class TikTacToeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
 
     //MARK: -  Properties
     var buttonToggled: Bool = true
+    var playerhasWon: Bool = false
     
     // MARK: - Actions
       @IBAction func replayButtonTapped(_ sender: Any) {
+        
+        
     }
     @IBAction func a1ButtonPressed(_ sender: Any) {
-        if buttonToggled == true {
-            a1Button.setTitle("X", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
-        } else {
-            a1Button.setTitle("O", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
+        if playerhasWon == false {
+            if buttonToggled == true {
+                a1Button.setTitle("X", for: .normal)
+                a1Button.setTitleColor(Colors.customRed, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            } else {
+                a1Button.setTitle("O", for: .normal)
+                a1Button.setTitleColor(Colors.customBlue, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            }
         }
     }
     @IBAction func a2ButtonPressed(_ sender: Any) {
-        if buttonToggled == true {
-            a2Button.setTitle("X", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
-        } else {
-            a2Button.setTitle("O", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
+        if playerhasWon == false {
+            if buttonToggled == true {
+                a2Button.setTitle("X", for: .normal)
+                a2Button.setTitleColor(Colors.customRed, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            } else {
+                a2Button.setTitle("O", for: .normal)
+                a2Button.setTitleColor(Colors.customBlue, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            }
         }
     }
     @IBAction func a3ButtonPressed(_ sender: Any) {
-        if buttonToggled == true {
-            a3Button.setTitle("X", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
-        } else {
-            a3Button.setTitle("O", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
+        if playerhasWon == false {
+            if buttonToggled == true {
+                a3Button.setTitle("X", for: .normal)
+                a3Button.setTitleColor(Colors.customRed, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            } else {
+                a3Button.setTitle("O", for: .normal)
+                a3Button.setTitleColor(Colors.customBlue, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            }
         }
     }
     @IBAction func b1ButtonPressed(_ sender: Any) {
-        if buttonToggled == true {
-            b1Button.setTitle("X", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
-            checkIfWinner()
-        } else {
-            b1Button.setTitle("O", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
+        if playerhasWon == false {
+            if buttonToggled == true {
+                b1Button.setTitle("X", for: .normal)
+                b1Button.setTitleColor(Colors.customRed, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            } else {
+                b1Button.setTitle("O", for: .normal)
+                b1Button.setTitleColor(Colors.customBlue, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            }
         }
     }
     @IBAction func b2ButtonPressed(_ sender: Any) {
-        if buttonToggled == true {
-            b2Button.setTitle("X", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
-        } else {
-            b2Button.setTitle("O", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
+        if playerhasWon == false {
+            if buttonToggled == true {
+                b2Button.setTitle("X", for: .normal)
+                b2Button.setTitleColor(Colors.customRed, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            } else {
+                b2Button.setTitle("O", for: .normal)
+                b2Button.setTitleColor(Colors.customBlue, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            }
         }
     }
     @IBAction func b3ButtonPressed(_ sender: Any) {
-        if buttonToggled == true {
-            b3Button.setTitle("X", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
-        } else {
-            b3Button.setTitle("O", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
+        if playerhasWon == false {
+            if buttonToggled == true {
+                b3Button.setTitle("X", for: .normal)
+                b3Button.setTitleColor(Colors.customRed, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            } else {
+                b3Button.setTitle("O", for: .normal)
+                b3Button.setTitleColor(Colors.customBlue, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            }
         }
     }
     @IBAction func c1ButtonPressed(_ sender: Any) {
-        if buttonToggled == true {
-            c1Button.setTitle("X", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
-        } else {
-            c1Button.setTitle("O", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
+        if playerhasWon == false {
+            if buttonToggled == true {
+                c1Button.setTitle("X", for: .normal)
+                c1Button.setTitleColor(Colors.customRed, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            } else {
+                c1Button.setTitle("O", for: .normal)
+                c1Button.setTitleColor(Colors.customBlue, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            }
         }
     }
     @IBAction func c2ButtonPressed(_ sender: Any) {
-        if buttonToggled == true {
-            c2Button.setTitle("X", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
-        } else {
-            c2Button.setTitle("O", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
+        if playerhasWon == false {
+            if buttonToggled == true {
+                c2Button.setTitle("X", for: .normal)
+                c2Button.setTitleColor(Colors.customRed, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            } else {
+                c2Button.setTitle("O", for: .normal)
+                c2Button.setTitleColor(Colors.customBlue, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            }
         }
     }
     @IBAction func c3ButtonPressed(_ sender: Any) {
-        if buttonToggled == true {
-            c3Button.setTitle("X", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
-        } else {
-            c3Button.setTitle("O", for: .normal)
-            buttonToggled.toggle()
-            checkIfWinner()
+        if playerhasWon == false {
+            if buttonToggled == true {
+                c3Button.setTitle("X", for: .normal)
+                c3Button.setTitleColor(Colors.customRed, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            } else {
+                c3Button.setTitle("O", for: .normal)
+                c3Button.setTitleColor(Colors.customBlue, for: .normal)
+                buttonToggled.toggle()
+                checkIfWinner()
+            }
         }
     }
     func checkIfWinner(){
-        
-        
             if a1Button.titleLabel?.text == "X" && a2Button.titleLabel?.text == "X" && a3Button.titleLabel?.text == "X" {
-                
                 winnerLabel.text = "X Wins!"
-                
-                
+                playerhasWon.toggle()
             } else if a1Button.titleLabel?.text == "X" && b1Button.titleLabel?.text == "X" && c1Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
+                playerhasWon.toggle()
             } else if a1Button.titleLabel?.text == "X" && b2Button.titleLabel?.text == "X" && c3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
+                playerhasWon.toggle()
             } else if a2Button.titleLabel?.text == "X" && b2Button.titleLabel?.text == "X" && c2Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
+                playerhasWon.toggle()
             } else if a3Button.titleLabel?.text == "X" && b3Button.titleLabel?.text == "X" && c3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
+                playerhasWon.toggle()
             } else if a3Button.titleLabel?.text == "X" && b2Button.titleLabel?.text == "X" && c1Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
+                playerhasWon.toggle()
             } else if b1Button.titleLabel?.text == "X" && b2Button.titleLabel?.text == "X" && b3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
+                playerhasWon.toggle()
             } else if c1Button.titleLabel?.text == "X" && c2Button.titleLabel?.text == "X" && c3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
+                playerhasWon.toggle()
             } else if a1Button.titleLabel?.text == "O" && a2Button.titleLabel?.text == "O" && a3Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
+                playerhasWon.toggle()
             } else if a1Button.titleLabel?.text == "O" && b1Button.titleLabel?.text == "O" && c1Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
+                playerhasWon.toggle()
             } else if a1Button.titleLabel?.text == "O" && b2Button.titleLabel?.text == "O" && c3Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
+                playerhasWon.toggle()
             } else if a2Button.titleLabel?.text == "O" && b2Button.titleLabel?.text == "O" && c2Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
+                playerhasWon.toggle()
             } else if a3Button.titleLabel?.text == "O" && b2Button.titleLabel?.text == "O" && c1Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
+                playerhasWon.toggle()
             } else if a3Button.titleLabel?.text == "O" && b3Button.titleLabel?.text == "O" && c3Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
+                playerhasWon.toggle()
             } else if b1Button.titleLabel?.text == "O" && b2Button.titleLabel?.text == "O" && b3Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
+                playerhasWon.toggle()
             } else if c1Button.titleLabel?.text == "O" && c2Button.titleLabel?.text == "O" && c3Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
+                playerhasWon.toggle()
             }
     }
 }
