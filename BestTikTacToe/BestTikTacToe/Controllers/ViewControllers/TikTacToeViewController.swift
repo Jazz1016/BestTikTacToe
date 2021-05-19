@@ -24,8 +24,6 @@ class TikTacToeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -35,84 +33,115 @@ class TikTacToeViewController: UIViewController {
 //    }
     
     //MARK: -  Properties
-    var buttonToggled: Bool = false
+    var buttonToggled: Bool = true
     
     // MARK: - Actions
     @IBAction func a1ButtonPressed(_ sender: Any) {
         
-        
         if buttonToggled == true {
-        
-            
-            a1Button.titleLabel?.text = "X"
+            a1Button.setTitle("X", for: .normal)
+            //a1Button.tintColor = .red
+            buttonToggled.toggle()
         } else {
-            
-            
-            a1Button.titleLabel?.text = "O"
+            a1Button.setTitle("O", for: .normal)
+            //a1Button.tintColor = .red
+            buttonToggled.toggle()
         }
     }
     @IBAction func a2ButtonPressed(_ sender: Any) {
         
         if buttonToggled == true {
-            a2Button.titleLabel?.text = "X"
+            a2Button.setTitle("X", for: .normal)
+            //a2Button.tintColor = .red
+            buttonToggled.toggle()
         } else {
-            a2Button.titleLabel?.text = "O"
+            a2Button.setTitle("O", for: .normal)
+            //a2Button.tintColor = .red
+            buttonToggled.toggle()
         }
     }
     @IBAction func a3ButtonPressed(_ sender: Any) {
         
         if buttonToggled == true {
-            a3Button.titleLabel?.text = "X"
+            a3Button.setTitle("X", for: .normal)
+            //a3Button.tintColor = .red
+            buttonToggled.toggle()
         } else {
-            a3Button.titleLabel?.text = "O"
+            a3Button.setTitle("O", for: .normal)
+            //a3Button.tintColor = .red
+            buttonToggled.toggle()
         }
     }
     @IBAction func b1ButtonPressed(_ sender: Any) {
         
         if buttonToggled == true {
-            b1Button.titleLabel?.text = "X"
+            b1Button.setTitle("X", for: .normal)
+            //b1Button.tintColor = .red
+            buttonToggled.toggle()
         } else {
-            b1Button.titleLabel?.text = "O"
+            b1Button.setTitle("O", for: .normal)
+            //b1Button.tintColor = .red
+            buttonToggled.toggle()
         }
     }
     @IBAction func b2ButtonPressed(_ sender: Any) {
      
         if buttonToggled == true {
-            b2Button.titleLabel?.text = "X"
+            b2Button.setTitle("X", for: .normal)
+            //b2Button.tintColor = .red
+            buttonToggled.toggle()
         } else {
-            b2Button.titleLabel?.text = "O"
+            b2Button.setTitle("O", for: .normal)
+            //b2Button.tintColor = .red
+            buttonToggled.toggle()
         }
     }
     @IBAction func b3ButtonPressed(_ sender: Any) {
         
         if buttonToggled == true {
-            b3Button.titleLabel?.text = "X"
+            b3Button.setTitle("X", for: .normal)
+            //b3Button.tintColor = .red
+            buttonToggled.toggle()
         } else {
-            b3Button.titleLabel?.text = "O"
+            b3Button.setTitle("O", for: .normal)
+            //b3Button.tintColor = .red
+            buttonToggled.toggle()
         }
     }
     @IBAction func c1ButtonPressed(_ sender: Any) {
         
         if buttonToggled == true {
-            c1Button.titleLabel?.text = "X"
+            c1Button.setTitle("X", for: .normal)
+            //c1Button.tintColor = .red
+            buttonToggled.toggle()
         } else {
-            c1Button.titleLabel?.text = "O"
+            c1Button.setTitle("O", for: .normal)
+            //c1Button.tintColor = .red
+            buttonToggled.toggle()
         }
     }
     @IBAction func c2ButtonPressed(_ sender: Any) {
         
         if buttonToggled == true {
-            c2Button.titleLabel?.text = "X"
+            c2Button.setTitle("X", for: .normal)
+            //c2Button.tintColor = .red
+            buttonToggled.toggle()
         } else {
-            c2Button.titleLabel?.text = "O"
+            c2Button.setTitle("O", for: .normal)
+            //c2Button.tintColor = .red
+            buttonToggled.toggle()
         }
     }
     @IBAction func c3ButtonPressed(_ sender: Any) {
         
         if buttonToggled == true {
-            c3Button.titleLabel?.text = "X"
+            c3Button.setTitle("X", for: .normal)
+            //c3Button.tintColor = .red
+            buttonToggled.toggle()
         } else {
-            c3Button.titleLabel?.text = "O"
+            c3Button.setTitle("O", for: .normal)
+            //c3Button.tintColor = .red
+            buttonToggled.toggle()
         }
     }
 
