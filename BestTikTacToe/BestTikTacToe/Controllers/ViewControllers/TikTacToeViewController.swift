@@ -27,11 +27,13 @@ class TikTacToeViewController: UIViewController {
 
         
     }
-    
+
     //MARK: -  Properties
     var buttonToggled: Bool = true
     
     // MARK: - Actions
+      @IBAction func replayButtonTapped(_ sender: Any) {
+    }
     @IBAction func a1ButtonPressed(_ sender: Any) {
         if buttonToggled == true {
             a1Button.setTitle("X", for: .normal)
