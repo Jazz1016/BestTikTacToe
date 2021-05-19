@@ -24,7 +24,9 @@ class TikTacToeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      
+      
+      
     }
 
     //MARK: -  Properties
@@ -33,7 +35,18 @@ class TikTacToeViewController: UIViewController {
     
     // MARK: - Actions
       @IBAction func replayButtonTapped(_ sender: Any) {
+        winnerLabel.text = ""
+        a1Button.setTitle("", for: .normal)
+        a2Button.setTitle("", for: .normal)
+        a3Button.setTitle("", for: .normal)
+        b1Button.setTitle("", for: .normal)
+        b2Button.setTitle("", for: .normal)
+        b3Button.setTitle("", for: .normal)
+        c1Button.setTitle("", for: .normal)
+        c2Button.setTitle("", for: .normal)
+        c3Button.setTitle("", for: .normal)
         
+    }
         
     }
     @IBAction func a1ButtonPressed(_ sender: Any) {
@@ -169,8 +182,8 @@ class TikTacToeViewController: UIViewController {
                 buttonToggled.toggle()
                 checkIfWinner()
             }
-        }
-    }
+          
+          
     func checkIfWinner(){
             if a1Button.titleLabel?.text == "X" && a2Button.titleLabel?.text == "X" && a3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
@@ -221,5 +234,6 @@ class TikTacToeViewController: UIViewController {
                 winnerLabel.text = "O Wins!"
                 playerhasWon.toggle()
             }
+        }
     }
-}
+    
