@@ -14,6 +14,7 @@
 		0D51ECD22655A6BB0085382C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D51ECD02655A6BB0085382C /* LaunchScreen.storyboard */; };
 		0D51ECE02655A71E0085382C /* TikTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51ECDF2655A71E0085382C /* TikTacToeViewController.swift */; };
 		0D51ECE22655A89B0085382C /* WinningLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51ECE12655A89B0085382C /* WinningLogic.swift */; };
+		6D979C382655E9F500B61A96 /* AIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D979C372655E9F500B61A96 /* AIHelper.swift */; };
 		C065865B2655B25900CD413D /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C065865A2655B25900CD413D /* StyleGuide.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		0D51ECD32655A6BB0085382C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D51ECDF2655A71E0085382C /* TikTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TikTacToeViewController.swift; sourceTree = "<group>"; };
 		0D51ECE12655A89B0085382C /* WinningLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinningLogic.swift; sourceTree = "<group>"; };
+		6D979C372655E9F500B61A96 /* AIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIHelper.swift; sourceTree = "<group>"; };
 		C065865A2655B25900CD413D /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				0D51ECE12655A89B0085382C /* WinningLogic.swift */,
+				6D979C372655E9F500B61A96 /* AIHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				0D51ECC62655A6BA0085382C /* AppDelegate.swift in Sources */,
 				0D51ECE22655A89B0085382C /* WinningLogic.swift in Sources */,
 				0D51ECE02655A71E0085382C /* TikTacToeViewController.swift in Sources */,
+				6D979C382655E9F500B61A96 /* AIHelper.swift in Sources */,
 				C065865B2655B25900CD413D /* StyleGuide.swift in Sources */,
 				0D51ECC82655A6BA0085382C /* SceneDelegate.swift in Sources */,
 			);
