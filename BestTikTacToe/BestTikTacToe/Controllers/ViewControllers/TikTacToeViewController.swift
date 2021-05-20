@@ -26,7 +26,6 @@ class TikTacToeViewController: UIViewController {
         super.viewDidLoad()
       
       
-      
     }
 
     //MARK: -  Properties
@@ -35,7 +34,9 @@ class TikTacToeViewController: UIViewController {
     
     // MARK: - Actions
       @IBAction func replayButtonTapped(_ sender: Any) {
-        winnerLabel.text = ""
+        self.buttonToggled = true
+        self.playerhasWon = false
+        winnerLabel.text = "Get three in a row to win!"
         a1Button.setTitle("", for: .normal)
         a2Button.setTitle("", for: .normal)
         a3Button.setTitle("", for: .normal)
@@ -45,22 +46,29 @@ class TikTacToeViewController: UIViewController {
         c1Button.setTitle("", for: .normal)
         c2Button.setTitle("", for: .normal)
         c3Button.setTitle("", for: .normal)
-        
+        a1Button.titleLabel?.text = ""
+        a2Button.titleLabel?.text = ""
+        a3Button.titleLabel?.text = ""
+        b1Button.titleLabel?.text = ""
+        b2Button.titleLabel?.text = ""
+        b3Button.titleLabel?.text = ""
+        c1Button.titleLabel?.text = ""
+        c2Button.titleLabel?.text = ""
+        c3Button.titleLabel?.text = ""
     }
-        
-    }
+    
     @IBAction func a1ButtonPressed(_ sender: Any) {
         if playerhasWon == false {
-            if buttonToggled == true {
-                a1Button.setTitle("X", for: .normal)
-                a1Button.setTitleColor(Colors.customRed, for: .normal)
-                buttonToggled.toggle()
-                checkIfWinner()
-            } else {
-                a1Button.setTitle("O", for: .normal)
-                a1Button.setTitleColor(Colors.customBlue, for: .normal)
-                buttonToggled.toggle()
-                checkIfWinner()
+                if buttonToggled == true {
+                    a1Button.setTitle("X", for: .normal)
+                    a1Button.setTitleColor(Colors.customRed, for: .normal)
+                    buttonToggled.toggle()
+                    checkIfWinner()
+                } else {
+                    a1Button.setTitle("O", for: .normal)
+                    a1Button.setTitleColor(Colors.customBlue, for: .normal)
+                    buttonToggled.toggle()
+                    checkIfWinner()
             }
         }
     }
@@ -182,48 +190,48 @@ class TikTacToeViewController: UIViewController {
                 buttonToggled.toggle()
                 checkIfWinner()
             }
-          
-          
-    func checkIfWinner(){
+        }
+    }
+        func checkIfWinner(){
             if a1Button.titleLabel?.text == "X" && a2Button.titleLabel?.text == "X" && a3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a1Button.titleLabel?.text == "X" && b1Button.titleLabel?.text == "X" && c1Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a1Button.titleLabel?.text == "X" && b2Button.titleLabel?.text == "X" && c3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a2Button.titleLabel?.text == "X" && b2Button.titleLabel?.text == "X" && c2Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a3Button.titleLabel?.text == "X" && b3Button.titleLabel?.text == "X" && c3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a3Button.titleLabel?.text == "X" && b2Button.titleLabel?.text == "X" && c1Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if b1Button.titleLabel?.text == "X" && b2Button.titleLabel?.text == "X" && b3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if c1Button.titleLabel?.text == "X" && c2Button.titleLabel?.text == "X" && c3Button.titleLabel?.text == "X" {
                 winnerLabel.text = "X Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a1Button.titleLabel?.text == "O" && a2Button.titleLabel?.text == "O" && a3Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a1Button.titleLabel?.text == "O" && b1Button.titleLabel?.text == "O" && c1Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a1Button.titleLabel?.text == "O" && b2Button.titleLabel?.text == "O" && c3Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a2Button.titleLabel?.text == "O" && b2Button.titleLabel?.text == "O" && c2Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a3Button.titleLabel?.text == "O" && b2Button.titleLabel?.text == "O" && c1Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
-                playerhasWon.toggle()
+                playerhasWon = true
             } else if a3Button.titleLabel?.text == "O" && b3Button.titleLabel?.text == "O" && c3Button.titleLabel?.text == "O" {
                 winnerLabel.text = "O Wins!"
                 playerhasWon.toggle()
@@ -235,5 +243,4 @@ class TikTacToeViewController: UIViewController {
                 playerhasWon.toggle()
             }
         }
-    }
-    
+}
