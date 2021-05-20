@@ -36,7 +36,6 @@ class TikTacToeViewController: UIViewController {
       @IBAction func replayButtonTapped(_ sender: Any) {
         self.buttonToggled = true
         self.playerhasWon = false
-        winnerLabel.text = "Get three in a row to win!"
         a1Button.setTitle("", for: .normal)
         a2Button.setTitle("", for: .normal)
         a3Button.setTitle("", for: .normal)
@@ -66,28 +65,32 @@ class TikTacToeViewController: UIViewController {
                     a1Button.setTitleColor(Colors.customRed, for: .normal)
                     buttonToggled.toggle()
                     checkIfWinner()
+                    AIMove()
                 } else {
                     a1Button.setTitle("O", for: .normal)
                     a1Button.setTitleColor(Colors.customBlue, for: .normal)
                     buttonToggled.toggle()
-                    checkIfWinner()
-                }
+                    checkIfWinner()                }
             }
         }
     }
     @IBAction func a2ButtonPressed(_ sender: Any) {
         guard let titleLabelCount = a2Button.titleLabel?.text?.count else {return}
         if playerhasWon == false {
-            if buttonToggled == true {
-                a2Button.setTitle("X", for: .normal)
-                a2Button.setTitleColor(Colors.customRed, for: .normal)
-                buttonToggled.toggle()
-                checkIfWinner()
-            } else {
-                a2Button.setTitle("O", for: .normal)
-                a2Button.setTitleColor(Colors.customBlue, for: .normal)
-                buttonToggled.toggle()
-                checkIfWinner()
+            if titleLabelCount > 0 {} else {
+                
+                if buttonToggled == true {
+                    a2Button.setTitle("X", for: .normal)
+                    a2Button.setTitleColor(Colors.customRed, for: .normal)
+                    buttonToggled.toggle()
+                    checkIfWinner()
+                    AIMove()
+                } else {
+                    a2Button.setTitle("O", for: .normal)
+                    a2Button.setTitleColor(Colors.customBlue, for: .normal)
+                    buttonToggled.toggle()
+                    checkIfWinner()
+                }
             }
         }
     }
@@ -100,6 +103,7 @@ class TikTacToeViewController: UIViewController {
                 a3Button.setTitleColor(Colors.customRed, for: .normal)
                 buttonToggled.toggle()
                 checkIfWinner()
+                AIMove()
             } else {
                 a3Button.setTitle("O", for: .normal)
                 a3Button.setTitleColor(Colors.customBlue, for: .normal)
@@ -118,11 +122,11 @@ class TikTacToeViewController: UIViewController {
                 b1Button.setTitleColor(Colors.customRed, for: .normal)
                 buttonToggled.toggle()
                 checkIfWinner()
+                AIMove()
             } else {
                 b1Button.setTitle("O", for: .normal)
                 b1Button.setTitleColor(Colors.customBlue, for: .normal)
                 buttonToggled.toggle()
-                checkIfWinner()
             }
         }
         }
@@ -136,6 +140,7 @@ class TikTacToeViewController: UIViewController {
                 b2Button.setTitleColor(Colors.customRed, for: .normal)
                 buttonToggled.toggle()
                 checkIfWinner()
+                AIMove()
             } else {
                 b2Button.setTitle("O", for: .normal)
                 b2Button.setTitleColor(Colors.customBlue, for: .normal)
@@ -154,6 +159,7 @@ class TikTacToeViewController: UIViewController {
                 b3Button.setTitleColor(Colors.customRed, for: .normal)
                 buttonToggled.toggle()
                 checkIfWinner()
+                AIMove()
             } else {
                 b3Button.setTitle("O", for: .normal)
                 b3Button.setTitleColor(Colors.customBlue, for: .normal)
@@ -172,6 +178,7 @@ class TikTacToeViewController: UIViewController {
                 c1Button.setTitleColor(Colors.customRed, for: .normal)
                 buttonToggled.toggle()
                 checkIfWinner()
+                AIMove()
             } else {
                 c1Button.setTitle("O", for: .normal)
                 c1Button.setTitleColor(Colors.customBlue, for: .normal)
@@ -190,6 +197,7 @@ class TikTacToeViewController: UIViewController {
                 c2Button.setTitleColor(Colors.customRed, for: .normal)
                 buttonToggled.toggle()
                 checkIfWinner()
+                AIMove()
             } else {
                 c2Button.setTitle("O", for: .normal)
                 c2Button.setTitleColor(Colors.customBlue, for: .normal)
@@ -208,6 +216,7 @@ class TikTacToeViewController: UIViewController {
                 c3Button.setTitleColor(Colors.customRed, for: .normal)
                 buttonToggled.toggle()
                 checkIfWinner()
+                AIMove()
             } else {
                 c3Button.setTitle("O", for: .normal)
                 c3Button.setTitleColor(Colors.customBlue, for: .normal)
@@ -218,6 +227,15 @@ class TikTacToeViewController: UIViewController {
         }
     }
     func checkIfWinner(){
+        guard let a1TitleLength = a1Button.titleLabel?.text?.count,
+              let a2TitleLength = a2Button.titleLabel?.text?.count,
+              let a3TitleLength = a3Button.titleLabel?.text?.count,
+              let b1TitleLength = b1Button.titleLabel?.text?.count,
+              let b2TitleLength = b2Button.titleLabel?.text?.count,
+              let b3TitleLength = b3Button.titleLabel?.text?.count,
+              let c1TitleLength = c1Button.titleLabel?.text?.count,
+              let c2TitleLength = c2Button.titleLabel?.text?.count,
+              let c3TitleLength = c3Button.titleLabel?.text?.count else {return}
         if a1Button.titleLabel?.text == "X" && a2Button.titleLabel?.text == "X" && a3Button.titleLabel?.text == "X" {
             winnerLabel.text = "X Wins!"
             playerhasWon = true
@@ -266,6 +284,74 @@ class TikTacToeViewController: UIViewController {
         } else if c1Button.titleLabel?.text == "O" && c2Button.titleLabel?.text == "O" && c3Button.titleLabel?.text == "O" {
             winnerLabel.text = "O Wins!"
             playerhasWon.toggle()
+        } else if a1TitleLength > 0 && a2TitleLength > 0 && a2TitleLength > 0 && a3TitleLength > 0 && b1TitleLength > 0 && b2TitleLength > 0 && b3TitleLength > 0 && c1TitleLength > 0 && c2TitleLength > 0 && c3TitleLength > 0 {
+            winnerLabel.text = "Draw!"
+        }
+    }
+    
+    func AIMove(){
+        guard let a1TitleLength = a1Button.titleLabel?.text?.count,
+              let a2TitleLength = a2Button.titleLabel?.text?.count,
+              let a3TitleLength = a3Button.titleLabel?.text?.count,
+              let b1TitleLength = b1Button.titleLabel?.text?.count,
+              let b2TitleLength = b2Button.titleLabel?.text?.count,
+              let b3TitleLength = b3Button.titleLabel?.text?.count,
+              let c1TitleLength = c1Button.titleLabel?.text?.count,
+              let c2TitleLength = c2Button.titleLabel?.text?.count,
+              let c3TitleLength = c3Button.titleLabel?.text?.count else {return}
+        
+        let ticTacArray = [a1TitleLength, a2TitleLength, a3TitleLength, b1TitleLength, b2TitleLength, b3TitleLength, c1TitleLength, c2TitleLength, c3TitleLength]
+        
+        
+        
+        
+        let number = Int.random(in: 0..<9)
+        
+        if ticTacArray[number] < 1 {
+            if number == 0 {
+                
+                a1ButtonPressed(self)
+                
+            } else if number == 1 {
+                
+                a2ButtonPressed(self)
+                
+            } else if number == 2 {
+                
+                a3ButtonPressed(self)
+            
+            } else if number == 3 {
+                
+                b1ButtonPressed(self)
+                
+            } else if number == 4 {
+                
+                b2ButtonPressed(self)
+                
+            } else if number == 5 {
+                
+                b3ButtonPressed(self)
+                
+            } else if number == 6 {
+                
+                c1ButtonPressed(self)
+                
+            } else if number == 7 {
+                
+                c2ButtonPressed(self)
+            
+            } else if number == 8 {
+                
+                c3ButtonPressed(self)
+                
+            }
+        } else if a1TitleLength > 0 && a2TitleLength > 0 && a3TitleLength > 0 && b1TitleLength > 0 && b2TitleLength > 0 && b3TitleLength > 0 && c1TitleLength > 0 && c2TitleLength > 0 && c3TitleLength > 0 {
+            
+            return
+            
+        } else {
+            
+            AIMove()
         }
     }
     
